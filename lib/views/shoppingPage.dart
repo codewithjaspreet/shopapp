@@ -14,6 +14,17 @@ class ShoppingPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.teal,
+        floatingActionButton: FloatingActionButton.extended(
+          backgroundColor: Colors.amber,
+          onPressed: () {},
+          label: GetX<CartController>(builder: (controller) {
+            return Text(
+              controller.count.toString(),
+              style: TextStyle(color: Colors.black, fontSize: 24),
+            );
+          }),
+          icon: Icon(Icons.add_shopping_cart_rounded, color: Colors.black),
+        ),
         body: SafeArea(
           child: Column(
             children: [
@@ -50,8 +61,8 @@ class ShoppingPage extends StatelessWidget {
                               ),
                               RaisedButton(
                                 onPressed: () {
-                                  cartController.addToCart(
-                                      cartController.cartItems[index]);
+                                  cartController
+                                      .addToCart(Controller.products[index]);
                                 },
                                 color: Colors.blue,
                                 textColor: Colors.white,

@@ -2,7 +2,7 @@ import 'package:get/get.dart';
 import 'package:shopapp/models/Product%20Model.dart';
 
 class ShoppingController extends GetxController {
-  var products = List.empty(growable: true).obs;
+  var products = List.from(const []).obs;
 
   @override
   void onInit() {
@@ -12,7 +12,7 @@ class ShoppingController extends GetxController {
   }
 
   void fetchProducts() async {
-    await Future.delayed(Duration(seconds: 1));
+    await Future.delayed(const Duration(seconds: 1));
     var response = [
       Product(
           id: 1,
@@ -33,6 +33,6 @@ class ShoppingController extends GetxController {
           pImg: 'abd',
           pName: 'ThirdProd'),
     ];
-    products.value = response;
+    products.assignAll(response);
   }
 }
