@@ -1,6 +1,7 @@
 # shopapp
+                             simple shop app explaining use of GETX statemanagement in flutter
+![Screenshot_20220523_235318](https://user-images.githubusercontent.com/85099922/169883362-f5e97612-ed39-4cb8-80db-a2d092eb0267.png)
 
-simple shop app explaining use of GETX statemanagement in flutter
 
 ## Getting Started
 
